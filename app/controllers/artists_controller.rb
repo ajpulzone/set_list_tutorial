@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
 
   def index
+    binding.pry
     @artists = Artist.all
   end 
 
@@ -21,6 +22,12 @@ class ArtistsController < ApplicationController
     artist.update(artist_params)
     redirect_to "/artists"
   end 
+
+  def destroy
+    artist = Artist.find(params[:id])
+    artist.destroy
+    redirect_to "/artists"
+  end
 
   #should make a private params. Private methods are only availabe
   #inside the class. Because we only need to use artist_params 

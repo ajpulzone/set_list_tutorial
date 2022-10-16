@@ -36,7 +36,6 @@ RSpec.describe "the artist edit" do
 
     expect(current_path).to eq("/artists")
     expect(page).to have_content("Prince")
-
   end
 
 end
