@@ -1,0 +1,8 @@
+# First argument is text user would see, second argument 
+# is the path the link should take
+<%= link_to "New Artist", "/artists/new" %>
+
+<% @artists.each do |artist| %>
+  <p><%= artist.name %> </p>
+
+<% end %>
