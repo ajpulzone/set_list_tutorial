@@ -1,0 +1,10 @@
+# First argument is text user would see, second argument 
+# is the path the link should take
+<%= link_to "New Artist", "/artists/new" %>
+
+<% @artists.each do |artist| %>
+  <p><%= artist.name %>  
+  <%= button_to "Edit #{artist.name}", "/artists/#{artist.id}/edit", method: :get %></p>
+  <%= button_to "Delete", "/artists/#{artist.id}", method: :delete %>
+
+<% end %>

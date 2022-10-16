@@ -21,7 +21,7 @@ RSpec.describe "the Songs index page", type: :feature do
         expect(page).to have_content(song_2.title)
         expect(page).to have_content("Play Count: #{song_2.play_count}")
 
-        save_and_open_page
+        #save_and_open_page
       end
     end
   end
